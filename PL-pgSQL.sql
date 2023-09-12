@@ -43,3 +43,20 @@ BEGIN
 	RAISE NOTICE 'Valor de a: % , Valor de b: % , Valor de c: % , Valor de Delta: %', n1, n2, n3, (n2^2) - 4 * n1 * n3;
 END $$
 
+--1.5 Faça um programa que gere um número inteiro e mostre a raiz cúbica de seu antecessor
+--e a raiz quadrada de seu sucessor.
+DO $$
+DECLARE
+	n1 NUMERIC (5, 2);
+	n2 NUMERIC (5, 2);
+	n3 NUMERIC (5, 2);
+BEGIN
+	--Gerando o numero
+	n1 := floor (random () * 100 + 1) :: INT;
+	--Encontrando antecessor e sucessor especificamente
+	n2 := n1 - 1;
+	n3 := n1 + 1;
+	--Calculando e printando na tela
+	RAISE NOTICE 'Numero gerado: %, Valor do antecessor: %, Valor do sucessor: %, Raiz cúbica do antecessor: %, Raiz quadrada do sucessor: %', n1, n2, n3, ||/n2, |/n3; 	
+END $$;
+
