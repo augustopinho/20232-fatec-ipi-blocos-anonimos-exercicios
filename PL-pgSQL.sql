@@ -76,3 +76,21 @@ BEGIN
 	--Calculando e ja printando
 	RAISE NOTICE 'Tamanho do terreno: % , Valor por metro quadrado: %, Valor total: %', n1, n2, floor (n1 * n2);
 END $$
+
+--1.7 Escreva um programa que gere um inteiro que representa o ano de nascimento de uma
+--pessoa no intervalo [1980, 2000] e gere um inteiro que representa o ano atual no intervalo
+--[2010, 2020]. O programa deve exibir a idade da pessoa em anos. Desconsidere detalhes
+--envolvendo dias, meses, anos bissextos etc.
+
+DO $$
+DECLARE
+	n1 NUMERIC (18, 6);
+	n2 NUMERIC (18, 6);
+BEGIN
+	--Gerando ano de nascimento
+	n1 := floor (random() * 21 + 1980) :: INT;
+	--Gerando 'ano atual'
+	n2 := floor (random() * 11 + 2010) :: INT;
+	--Calculando e Printando
+	RAISE NOTICE 'Ano de nascimento: %, Ano atual: %, Idade: %', n1, n2, n2 - n1;
+END $$
