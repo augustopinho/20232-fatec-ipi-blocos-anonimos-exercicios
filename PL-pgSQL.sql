@@ -60,3 +60,19 @@ BEGIN
 	RAISE NOTICE 'Numero gerado: %, Valor do antecessor: %, Valor do sucessor: %, Raiz cúbica do antecessor: %, Raiz quadrada do sucessor: %', n1, n2, n3, ||/n2, |/n3; 	
 END $$;
 
+--1.6 Faça um programa que gere medidas reais de um terreno retangular. Gere também um
+--valor real no intervalo [60, 70] que representa o preço por metro quadrado. O programa deve
+--exibir o valor total do terreno.
+
+DO $$
+DECLARE
+	n1 NUMERIC (5, 2);
+	n2 NUMERIC (5, 2);
+BEGIN
+	--Gerando tamanho do terreno (inteiro)
+	n1 := floor (random () * 100 + 1) :: INT;
+	--Gerando preço por metro quadrado (real)
+	n2 := random () * 10 + 60;
+	--Calculando e ja printando
+	RAISE NOTICE 'Tamanho do terreno: % , Valor por metro quadrado: %, Valor total: %', n1, n2, floor (n1 * n2);
+END $$
