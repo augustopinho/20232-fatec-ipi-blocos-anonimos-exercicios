@@ -1,4 +1,4 @@
-Essa atividade tem como o intuito de seguir a aula de programação em Banco de dados da Fatec Ipiranga. Nesta aula estamos aprendendo um pouco mais sobre o PL/pgSQL e seus comandos.
+Essa atividade tem como o intuito de seguir a aula de programação em Banco de dados da Fatec Ipiranga. Nesta aula estamos aprendendo um pouco mais sobre o PL/pgSQL, operadores lógicos e estruturas de seleção.
 
 Nomes e RA:
 
